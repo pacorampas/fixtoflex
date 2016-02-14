@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  margin-bottom: 16px;
+}
+
+footer {
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+main {
+  max-width: 990px;
+  margin: 0 auto;
+}
+
+figure {
+  margin-bottom: 16px;
+}
+
+.flex {
+  width: 100%;
+  margin-bottom: 20px;
+
+  &::after {
+    content: "";
+    display: table;
+    width: 100%;
+    clear: both;
+  }
+}
+
+.flex .article-item {
+  float: left;
+}
+
+/* 1 item */
+.flex .article-item:nth-child(1):nth-last-child(1) {
+  width: 100%;
+  height: 100%;
+  background: #eee;
+}
+
+/* 2 items */
+.flex .article-item:nth-child(1):nth-last-child(2) {
+  width: 66.66%;
+  height: 100%;
+  background: #ddd;
+}
+
+.flex .article-item:nth-child(2):nth-last-child(1) {
+  width: 33.33%;
+  height: 100%;
+  background: #ccc;
+}
+
+/* 3 items */
+.flex .article-item:nth-child(1):nth-last-child(3) {
+  width: 650px;
+
+  article {
+    padding: 0 20px 0 10px;
+    height: 100%;
+  }
+}
+
+.flex .article-item:nth-child(2):nth-last-child(2),
+.flex .article-item:nth-child(3):nth-last-child(1) {
+  width: 340px;
+
+  article {
+    padding: 0 10px 0 20px;
+    height: 100%;
+  }
+}
+
+.flex .article-item:nth-child(2):nth-last-child(2) {
+  height: 337px;
+  margin-bottom: 10px;
+  position: relative;
+
+  h1 {
+    font-size: 26px;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -7px;
+    right: 100px;
+    left: 20px;
+    height: 2px;
+    background: #ccc;
+  }
+}
+
+.flex .article-item:nth-child(3):nth-last-child(1) {
+  height: 261px;
+
+  article {
+    padding-top: 10px;
+  }
+}
+
+/* 4 items */
+.flex .article-item:nth-child(1):nth-last-child(4),
+.flex .article-item:nth-child(2):nth-last-child(3),
+.flex .article-item:nth-child(3):nth-last-child(2),
+.flex .article-item:nth-child(4):nth-last-child(1) {
+  background: red;
+  width: 50px;
+  height: 50px;
+}
+
+.flex .article-item:nth-child(1):nth-last-child(5),
+.flex .article-item:nth-child(2):nth-last-child(4),
+.flex .article-item:nth-child(3):nth-last-child(3),
+.flex .article-item:nth-child(4):nth-last-child(2),
+.flex .article-item:nth-child(5):nth-last-child(1) {
+  background: blue;
+  width: 50px;
+  height: 50px;
+}
